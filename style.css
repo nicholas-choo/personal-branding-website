@@ -1,0 +1,709 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+::selection {
+    background: #00FFEF;
+    color: #0D1E33;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0D1E33;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 48px;
+}
+
+h2 {
+    font-weight: 500;
+    font-size: 24px;
+}
+
+h3 {
+    font-weight: 500;
+    font-size: 16px;
+}
+
+h4 {
+    font-weight: 400;
+    font-size: 16px;
+}
+
+p {
+    font-weight: 400;
+}
+
+a {
+    font-weight: 500;
+    text-decoration: none;
+    outline: 2px #BC13FE00 solid;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+a:focus {
+    outline: none;
+}
+
+a:focus-visible {
+    outline: 2px #BC13FE solid;
+    transition: outline .2s ease;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+    width: 1100px;
+    max-width: 80vw;
+}
+
+/* cursor light */
+
+.light {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 220%;
+    height: 220%;
+    pointer-events: none;
+    transform: translate(calc(var(--x) - 50%), calc(var(--y) - 50%));
+    background: radial-gradient(circle, transparent 4%, rgba(0, 0, 0, .1) 16%);
+}
+
+/* header */
+
+header {
+    width: 393px;
+    height: 80vh;
+    position: fixed;
+    margin: 10vh 0;
+    display: flex;
+    flex-direction: column;
+}
+
+header h1 {
+    margin-bottom: 6px;
+}
+
+header h1 a {
+    font-weight: 700;
+    color: #F5F0E7;
+}
+
+header h2 {
+    margin-bottom: 12px;
+    color: #F5F0E7;
+}
+
+header p {
+    margin-bottom: 60px;
+    color: #F5F0E780;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+header ul {
+    list-style: none;
+}
+
+/* navigation links */
+
+.nav-links ul {
+    width: min-content;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-links a {
+    display: flex;
+    align-items: center;
+    padding: 10px 10px 10px 0;
+}
+
+.nav-links a:hover .link-line, .nav-links a.active .link-line, .nav-links a:focus .link-line {
+    width: 60px;
+    border-top: 1px #F5F0E7 solid;
+}
+
+.nav-links a:hover .link-label, .nav-links a.active .link-label, .nav-links a:focus .link-label {
+    color: #F5F0E7;
+}
+
+.link-line {
+    width: 30px;
+    margin-left: 2px;
+    margin-right: 10px;
+    border-top: 1px #F5F0E740 solid;
+    transition: width .2s, border-top .2s;
+}
+
+.link-label {
+    color: #F5F0E740;
+    font-size: 14px;
+    text-transform: uppercase;
+    transition: color .2s;
+}
+
+/* social links */
+
+.social-links {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+}
+
+.social-links li {
+    margin-right: 10px;
+}
+
+.social-links a {
+    display: block;
+    height: 32px;
+    width: 32px;
+}
+
+.social-links svg {
+    height: 100%;
+    width: 100%;
+    color: #F5F0E760;
+    transition: color .2s;
+}
+
+.social-links svg:hover {
+    color: #F5F0E7;
+}
+
+/* main */
+
+main {
+    width: calc(48% + 40px);
+    min-height: 100vh;
+    margin-left: calc(52% - 40px);
+}
+
+section {
+    padding-top: 10vh;
+}
+
+.section-title {
+    color: #F5F0E7;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: none;
+}
+
+/* about section */
+
+#about {
+    width: calc(100% - 40px);
+    margin: 0 20px;
+}
+
+#about p {
+    color: #F5F0E780;
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+#about p:last-child {
+    margin-bottom: 0;
+}
+
+#about a, #about span {
+    color: #F5F0E7;
+    font-weight: 500;
+    transition: color .2s;
+}
+
+#about a:hover, #about span:hover {
+    color: #00FFEF;
+    cursor: pointer;
+}
+
+.blinding:hover {
+    cursor: url('images/skye-bird/skye-bird-0.png'), auto;
+    -webkit-animation: cursor 1s infinite;
+    animation: cursor 1s infinite;
+}
+
+@-webkit-keyframes cursor {
+    0% {cursor: url('images/skye-bird/skye-bird-0.png'), auto;}
+    2% {cursor: url('images/skye-bird/skye-bird-1.png'), auto;}
+    4% {cursor: url('images/skye-bird/skye-bird-2.png'), auto;}
+    6% {cursor: url('images/skye-bird/skye-bird-3.png'), auto;}
+    8% {cursor: url('images/skye-bird/skye-bird-4.png'), auto;}
+    10% {cursor: url('images/skye-bird/skye-bird-5.png'), auto;}
+    12% {cursor: url('images/skye-bird/skye-bird-6.png'), auto;}
+    14% {cursor: url('images/skye-bird/skye-bird-7.png'), auto;}
+    16% {cursor: url('images/skye-bird/skye-bird-8.png'), auto;}
+    18% {cursor: url('images/skye-bird/skye-bird-9.png'), auto;}
+    20% {cursor: url('images/skye-bird/skye-bird-10.png'), auto;}
+    22% {cursor: url('images/skye-bird/skye-bird-11.png'), auto;}
+    24% {cursor: url('images/skye-bird/skye-bird-12.png'), auto;}
+    26% {cursor: url('images/skye-bird/skye-bird-13.png'), auto;}
+    28% {cursor: url('images/skye-bird/skye-bird-14.png'), auto;}
+    30% {cursor: url('images/skye-bird/skye-bird-15.png'), auto;}
+    32% {cursor: url('images/skye-bird/skye-bird-16.png'), auto;}
+    34% {cursor: url('images/skye-bird/skye-bird-17.png'), auto;}
+    36% {cursor: url('images/skye-bird/skye-bird-18.png'), auto;}
+    38% {cursor: url('images/skye-bird/skye-bird-19.png'), auto;}
+    40% {cursor: url('images/skye-bird/skye-bird-20.png'), auto;}
+    42% {cursor: url('images/skye-bird/skye-bird-21.png'), auto;}
+    44% {cursor: url('images/skye-bird/skye-bird-22.png'), auto;}
+    46% {cursor: url('images/skye-bird/skye-bird-23.png'), auto;}
+    48% {cursor: url('images/skye-bird/skye-bird-24.png'), auto;}
+    50% {cursor: url('images/skye-bird/skye-bird-25.png'), auto;}
+    52% {cursor: url('images/skye-bird/skye-bird-26.png'), auto;}
+    54% {cursor: url('images/skye-bird/skye-bird-27.png'), auto;}
+    56% {cursor: url('images/skye-bird/skye-bird-28.png'), auto;}
+    58% {cursor: url('images/skye-bird/skye-bird-29.png'), auto;}
+    60% {cursor: url('images/skye-bird/skye-bird-30.png'), auto;}
+    62% {cursor: url('images/skye-bird/skye-bird-31.png'), auto;}
+    64% {cursor: url('images/skye-bird/skye-bird-32.png'), auto;}
+    66% {cursor: url('images/skye-bird/skye-bird-33.png'), auto;}
+    68% {cursor: url('images/skye-bird/skye-bird-34.png'), auto;}
+    70% {cursor: url('images/skye-bird/skye-bird-35.png'), auto;}
+    72% {cursor: url('images/skye-bird/skye-bird-36.png'), auto;}
+    74% {cursor: url('images/skye-bird/skye-bird-37.png'), auto;}
+    76% {cursor: url('images/skye-bird/skye-bird-38.png'), auto;}
+    78% {cursor: url('images/skye-bird/skye-bird-39.png'), auto;}
+    80% {cursor: url('images/skye-bird/skye-bird-40.png'), auto;}
+    82% {cursor: url('images/skye-bird/skye-bird-41.png'), auto;}
+    84% {cursor: url('images/skye-bird/skye-bird-42.png'), auto;}
+    86% {cursor: url('images/skye-bird/skye-bird-43.png'), auto;}
+    88% {cursor: url('images/skye-bird/skye-bird-44.png'), auto;}
+    90% {cursor: url('images/skye-bird/skye-bird-45.png'), auto;}
+    92% {cursor: url('images/skye-bird/skye-bird-46.png'), auto;}
+    94% {cursor: url('images/skye-bird/skye-bird-47.png'), auto;}
+    96% {cursor: url('images/skye-bird/skye-bird-48.png'), auto;}
+    98% {cursor: url('images/skye-bird/skye-bird-49.png'), auto;}
+    100% {cursor: url('images/skye-bird/skye-bird-50.png'), auto;}
+}
+
+@keyframes cursor {
+    0% {cursor: url('images/skye-bird/skye-bird-0.png'), auto;}
+    2% {cursor: url('images/skye-bird/skye-bird-1.png'), auto;}
+    4% {cursor: url('images/skye-bird/skye-bird-2.png'), auto;}
+    6% {cursor: url('images/skye-bird/skye-bird-3.png'), auto;}
+    8% {cursor: url('images/skye-bird/skye-bird-4.png'), auto;}
+    10% {cursor: url('images/skye-bird/skye-bird-5.png'), auto;}
+    12% {cursor: url('images/skye-bird/skye-bird-6.png'), auto;}
+    14% {cursor: url('images/skye-bird/skye-bird-7.png'), auto;}
+    16% {cursor: url('images/skye-bird/skye-bird-8.png'), auto;}
+    18% {cursor: url('images/skye-bird/skye-bird-9.png'), auto;}
+    20% {cursor: url('images/skye-bird/skye-bird-10.png'), auto;}
+    22% {cursor: url('images/skye-bird/skye-bird-11.png'), auto;}
+    24% {cursor: url('images/skye-bird/skye-bird-12.png'), auto;}
+    26% {cursor: url('images/skye-bird/skye-bird-13.png'), auto;}
+    28% {cursor: url('images/skye-bird/skye-bird-14.png'), auto;}
+    30% {cursor: url('images/skye-bird/skye-bird-15.png'), auto;}
+    32% {cursor: url('images/skye-bird/skye-bird-16.png'), auto;}
+    34% {cursor: url('images/skye-bird/skye-bird-17.png'), auto;}
+    36% {cursor: url('images/skye-bird/skye-bird-18.png'), auto;}
+    38% {cursor: url('images/skye-bird/skye-bird-19.png'), auto;}
+    40% {cursor: url('images/skye-bird/skye-bird-20.png'), auto;}
+    42% {cursor: url('images/skye-bird/skye-bird-21.png'), auto;}
+    44% {cursor: url('images/skye-bird/skye-bird-22.png'), auto;}
+    46% {cursor: url('images/skye-bird/skye-bird-23.png'), auto;}
+    48% {cursor: url('images/skye-bird/skye-bird-24.png'), auto;}
+    50% {cursor: url('images/skye-bird/skye-bird-25.png'), auto;}
+    52% {cursor: url('images/skye-bird/skye-bird-26.png'), auto;}
+    54% {cursor: url('images/skye-bird/skye-bird-27.png'), auto;}
+    56% {cursor: url('images/skye-bird/skye-bird-28.png'), auto;}
+    58% {cursor: url('images/skye-bird/skye-bird-29.png'), auto;}
+    60% {cursor: url('images/skye-bird/skye-bird-30.png'), auto;}
+    62% {cursor: url('images/skye-bird/skye-bird-31.png'), auto;}
+    64% {cursor: url('images/skye-bird/skye-bird-32.png'), auto;}
+    66% {cursor: url('images/skye-bird/skye-bird-33.png'), auto;}
+    68% {cursor: url('images/skye-bird/skye-bird-34.png'), auto;}
+    70% {cursor: url('images/skye-bird/skye-bird-35.png'), auto;}
+    72% {cursor: url('images/skye-bird/skye-bird-36.png'), auto;}
+    74% {cursor: url('images/skye-bird/skye-bird-37.png'), auto;}
+    76% {cursor: url('images/skye-bird/skye-bird-38.png'), auto;}
+    78% {cursor: url('images/skye-bird/skye-bird-39.png'), auto;}
+    80% {cursor: url('images/skye-bird/skye-bird-40.png'), auto;}
+    82% {cursor: url('images/skye-bird/skye-bird-41.png'), auto;}
+    84% {cursor: url('images/skye-bird/skye-bird-42.png'), auto;}
+    86% {cursor: url('images/skye-bird/skye-bird-43.png'), auto;}
+    88% {cursor: url('images/skye-bird/skye-bird-44.png'), auto;}
+    90% {cursor: url('images/skye-bird/skye-bird-45.png'), auto;}
+    92% {cursor: url('images/skye-bird/skye-bird-46.png'), auto;}
+    94% {cursor: url('images/skye-bird/skye-bird-47.png'), auto;}
+    96% {cursor: url('images/skye-bird/skye-bird-48.png'), auto;}
+    98% {cursor: url('images/skye-bird/skye-bird-49.png'), auto;}
+    100% {cursor: url('images/skye-bird/skye-bird-50.png'), auto;}
+}
+
+/* experience section */
+
+.experience-cont {
+    border-radius: 8px;
+    margin-bottom: 20px;
+    transition: background-color .2s, opacity .2s;
+    cursor: pointer;
+}
+
+.experience-cont:hover {
+    background-color: #F5F0E710;
+    box-shadow: 0 -1px #F5F0E725;
+}
+
+.experience-cont.focused {
+    opacity: 50%;
+}
+
+.experience-cont.hovered {
+    opacity: 50%;
+}
+
+.experience-cont a {
+    display: flex;
+    padding: 20px;
+}
+
+.experience-time {
+    width: 200px;
+    margin-right: 20px;
+    padding-top: 3px;
+    color: #F5F0E780;
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.experience-details {
+    width: 100%;
+}
+
+.experience-details h3 {
+    color: #F5F0E7;
+    transition: color .2s;
+}
+
+.experience-cont:hover h3 {
+    color: #00FFEF;
+}
+
+.experience-cont span {
+    display: inline-block;
+    transform: translate(0, 0);
+    transition: transform .2s;
+}
+
+.experience-cont:hover span {
+    transform: translate(4px, -4px);
+}
+
+.experience-details h4 {
+    color: #F5F0E760;
+}
+
+.experience-details p {
+    color: #F5F0E780;
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.experience-details ul {
+    margin-top: 10px;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.experience-details li {
+    margin: 4px 6px;
+    padding: 4px 12px;
+    font-size: 14px;
+    border-radius: 16px;
+    color: #00FFEF;
+    background-color: #00FFEF20;
+}
+
+.experience-details li:first-child, .experience-details li:nth-child(n) {
+    margin-left: 0;
+}
+
+.experience-details li:last-child {
+    margin-right: 0;
+}
+
+/* education */
+
+.education-cont {
+    border-radius: 8px;
+    margin-bottom: 20px;
+    transition: background-color .2s, opacity .2s;
+    cursor: pointer;
+}
+
+.education-cont:hover {
+    background-color: #F5F0E710;
+    box-shadow: 0 -1px #F5F0E725;
+}
+
+.education-cont.focused {
+    opacity: 50%;
+}
+
+.education-cont.hovered {
+    opacity: 50%;
+}
+
+.education-cont a {
+    display: flex;
+    padding: 20px;
+}
+
+.education-time {
+    width: 200px;
+    margin-right: 20px;
+    padding-top: 2px;
+    color: #F5F0E780;
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.education-details {
+    width: 100%;
+}
+
+.education-details h3 {
+    color: #F5F0E7;
+    transition: color .2s;
+}
+
+.education-cont:hover h3 {
+    color: #00FFEF;
+}
+
+.education-cont span {
+    display: inline-block;
+    transform: translate(0, 0);
+    transition: transform .2s;
+}
+
+.education-cont:hover span {
+    transform: translate(4px, -4px);
+}
+
+.education-details h4 {
+    color: #F5F0E760;
+}
+
+.education-details p {
+    color: #F5F0E780;
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* view resume */
+
+.resume {
+    margin: 0 20px;
+    padding-bottom: 2px;
+    color: #F5F0E7;
+}
+
+.resume .view-resume {
+    border-bottom: 0 #00FFEF00 solid;
+    transition: border-bottom .2s;
+}
+
+.resume:hover .view-resume {
+    border-bottom: 1px #00FFEF solid;
+}
+
+.resume .resume-arrow {
+    display: inline-block;
+    transform: translateX(0);
+    transition: transform .2s;
+}
+
+.resume:hover .resume-arrow {
+    transform: translateX(8px);
+}
+
+/* projects */
+
+#projects {
+    height: 100vh;
+}
+
+/* footer */
+
+#footer p {
+    margin: 0 20px 10vh 20px;
+    color: #F5F0E760;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+#footer a {
+    color: #F5F0E7;
+    transition: color .2s;
+}
+
+#footer a:hover {
+    color: #00FFEF;
+}
+
+@media (max-width: 1023px) {
+    .light {
+        width: 100%;
+        height: 100%;
+        transform: unset;
+        background: rgba(0, 0, 0, .1);
+    }
+
+    .container {
+        display: grid;
+        max-width: 100vw;
+    }
+    
+    /* header */
+    
+    header {
+        position: unset;
+        height: unset;
+        margin: 10vw 10vw 0 10vw;
+        max-width: 80vw;
+    }
+
+    header p {
+        margin-bottom: 40px;
+    }
+    
+    /* navigation links */
+
+    .nav-links {
+        display: none;
+    }
+    
+    /* main */
+    
+    main {
+        width: 100%;
+        margin-left: unset;
+    }
+
+    .section-title {
+        display: block;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        padding: 20px 10vw;
+        -webkit-backdrop-filter: blur(4px);
+        backdrop-filter: blur(4px);
+    }
+    
+    /* about section */
+    
+    #about {
+        width: unset;
+        margin: 0;
+    }
+
+    #about p {
+        margin: 0 10vw 20px 10vw;
+    }
+    
+    /* experience section */
+
+    .experience-cont {
+        margin: 0 10vw 20px 10vw;
+    }
+    
+    .experience-cont a {
+        padding: 0;
+    }
+    
+    /* education */
+    
+    .education-cont {
+        margin: 0 10vw 20px 10vw;
+    }
+
+    .education-cont a {
+        padding: 0;
+    }
+    
+    /* view resume */
+    
+    .resume {
+        margin: 0 10vw;
+    }
+    
+    /* projects */
+    
+    #projects {
+        height: 100vh;
+    }
+    
+    /* footer */
+    
+    #footer p {
+        margin: 0 10vw 10vh 10vw;
+        width: 450px;
+    }
+}
+
+@media (max-width: 767px) {
+    h1 {
+        font-size: 32px;
+    }
+    
+    h2 {
+        font-size: 20px;
+    }
+    
+    /* experience section */
+    
+    .experience-cont a {
+        display: grid;
+    }
+
+    .experience-time {
+        width: unset;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    
+    /* education */
+    
+    .education-cont a {
+        display: grid;
+    }
+
+    .education-time {
+        width: unset;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    
+    /* footer */
+    
+    #footer p {
+        width: unset;
+    }
+}
