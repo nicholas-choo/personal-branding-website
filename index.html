@@ -10,8 +10,8 @@
     <meta property="og:site_name" content="Nicholas Choo">
     <meta property="og:type" content="website">
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:creator" content="@nicholas.choo_">
-    <meta property="twitter:site" content="@nicholas.choo_">
+    <meta property="twitter:creator" content="@vandal_main">
+    <meta property="twitter:site" content="@vandal_main">
     <meta property="og:title" content="Nicholas Choo">
     <meta property="og:description" content="Nicholas Choo is an aspiring software engineer who's passionate in coding, problem-solving, and innovating technology solutions.">
     <meta property="og:url" content="https://nicholaschoo.netlify.app">
@@ -102,16 +102,16 @@
         </header>
         <main>
             <section id="about">
-                <h3 class="section-title">About</h2>
+                <h3 class="section-title">About</h3>
                 <p>Back in 2018, I started getting into coding. I was curious about how the technology I used worked, so I began learning. Creating my first simple program excited me.</p>
                 <p>Fast-forward to today, I'm a passionate software engineering student at <a href="https://university.taylors.edu.my/en.html" target="_blank">Taylor's University</a>, learning coding and working on projects that solve real-world problems using the latest technology.</p>
                 <p>When I'm not studying or working, I'm usually lifting weights, playing pocket billiards, or <span class="blinding" id="blinding">blinding</span> my teammates in Valorant.</p>
             </section>
             <section id="experience">
-                <h3 class="section-title">Experience</h2>
+                <h3 class="section-title">Experience</h3>
                 <div class="experience-cont">
                     <a href="https://www.breakthroughacademy.com.my" target="_blank">
-                        <p class="experience-time">Apr — Aug 2023</p>
+                        <div class="experience-time">Apr — Aug 2023</div>
                         <div class="experience-details">
                             <h3>Web Developer • Breakthrough Academy <span>&#8599;&#xFE0E;</span></h3>
                             <h4>Intern</h4>
@@ -129,7 +129,7 @@
                 </div>
                 <div class="experience-cont">
                     <a href="https://www.transact2.com" target="_blank">
-                        <p class="experience-time">Jan — Apr 2021</p>
+                        <div class="experience-time">Jan — Apr 2021</div>
                         <div class="experience-details">
                             <h3>Back End Developer • transact2 <span>&#8599;&#xFE0E;</span></h3>
                             <h4>Intern</h4>
@@ -145,10 +145,10 @@
                 <a href="resume.pdf" class="resume" target="_blank"><span class="view-resume">View Full Resume</span> <span class="resume-arrow">-></span></a>
             </section>
             <section id="education">
-                <h3 class="section-title">Education</h2>
+                <h3 class="section-title">Education</h3>
                 <div class="education-cont">
                     <a href="https://university.taylors.edu.my/en/study/undergraduate/computing/bachelor-software-engineering-hons.html" target="_blank">
-                        <p class="education-time">2021 — Present</p>
+                        <div class="education-time">2021 — Present</div>
                         <div class="education-details">
                             <h3>Bachelor's Degree, Computer Software Engineering • Taylor's University <span>&#8599;&#xFE0E;</span></h3>
                             <p>CGPA: 3.39</p>
@@ -157,7 +157,7 @@
                 </div>
                 <div class="education-cont">
                     <a href="https://college.taylors.edu.my/en/study/diploma-programmes/diploma-in-information-technology-dit.html" target="_blank">
-                        <p class="education-time">2019 — 2021</p>
+                        <div class="education-time">2019 — 2021</div>
                         <div class="education-details">
                             <h3>Diploma of Education, Information Technology • Taylor's University <span>&#8599;&#xFE0E;</span></h3>
                             <p>CGPA: 3.28</p>
@@ -167,7 +167,23 @@
                 <a href="resume.pdf" class="resume" target="_blank"><span class="view-resume">View Full Resume</span> <span class="resume-arrow">-></span></a>
             </section>
             <section id="projects">
-                <h3 class="section-title">Projects</h2>
+                <h3 class="section-title">Projects</h3>
+                <div class="projects-cont">
+                    <a href="https://nicholaschoo-tasktracker.netlify.app" target="_blank">
+                        <div class="projects-img">
+                            <img src="images/tasktracker.jpg">
+                        </div>
+                        <div class="projects-details">
+                            <h3>TaskTracker • A Simple Task Mangement App <span>&#8599;&#xFE0E;</span></h3>
+                            <p>Web app for managing tasks. Create your own account, create lists & tasks, and track your tasks.</p>
+                            <ul>
+                                <li>HTML/CSS</li>
+                                <li>JavaScript</li>
+                                <li>Netlify</li>
+                            </ul>
+                        </div>
+                    </a>
+                </div>
             </section>
             <section id="footer">
                 <p>The design drew inspiration from <a href="https://brittanychiang.com" target="_blank">Brittany Chiang's website</a> and was coded using <a href="https://code.visualstudio.com" target="_blank">Visual Studio Code</a> by myself. Built entirely using <a href="https://html.spec.whatwg.org" target="_blank">HTML</a>, <a href="https://www.w3.org/TR/CSS/" target="_blank">CSS</a>, and <a href="https://www.javascript.com" target="_blank">JavaScript</a>.</p>
@@ -321,6 +337,48 @@
                     }
                 });
                 educationCont.classList.remove('focused');
+            });
+        });
+    </script>
+    <script>
+        // projects cont hover and focus opacity
+        const projectsConts = document.querySelectorAll('.projects-cont');
+    
+        projectsConts.forEach(cont => {
+            cont.addEventListener('mouseover', () => {
+                projectsConts.forEach(otherCont => {
+                    if (otherCont !== cont) {
+                        otherCont.classList.add('hovered');
+                    }
+                });
+            });
+        
+            cont.addEventListener('mouseout', () => {
+                projectsConts.forEach(otherCont => {
+                    if (otherCont !== cont) {
+                        otherCont.classList.remove('hovered');
+                    }
+                });
+            });
+        });
+
+        projectsConts.forEach((projectCont) => {
+            projectCont.addEventListener('focusin', () => {
+                projectsConts.forEach((otherCont) => {
+                    if (otherCont !== projectCont) {
+                        otherCont.classList.add('focused');
+                    }
+                });
+                projectCont.classList.remove('focused');
+            });
+
+            projectCont.addEventListener('focusout', () => {
+                projectsConts.forEach((otherCont) => {
+                    if (otherCont !== projectCont) {
+                        otherCont.classList.remove('focused');
+                    }
+                });
+                projectCont.classList.remove('focused');
             });
         });
     </script>
